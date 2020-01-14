@@ -64,7 +64,11 @@
 	 }
 	 
 	 var onSuccess = function(data) {
-		$('#numberToDial').val(data);
+		 console.log(typeof data);
+		 if (typeof data === "string"){
+			 $('#numberToDial').val(data);
+		 }
+		
 	 };
 	 
 	 var onError = function(data) {
