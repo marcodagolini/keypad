@@ -23,7 +23,7 @@
 		 
 		 var numberToDial = $("#numberToDial").val();
 		 
-		 if(string === "#"){
+		 if(string === "c"){
 			 numberToDial = numberToDial.substring(0, numberToDial.length - 1);
 		 } else{	 
 			 numberToDial = numberToDial + string;
@@ -65,7 +65,7 @@
 </p>
 <p>
   <button data-text="0" onclick="stampNumber(0)" data-number="0">0</button>
-  <button data-text="#" onclick="stampNumber(#)" data-number="cancel">cancel</button>
+  <button data-text="c" onclick="stampNumber(#)" data-number="c">cancel</button>
 </p>
  
  
