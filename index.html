@@ -27,7 +27,7 @@
 		 var numberToDial = $("#numberToDial").val();
 		 
 		 if(string === "#"){
-			 numberToDial = numberToDial.slice(0, -1);
+			 numberToDial = numberToDial.substring(0, numberToDial.length - 1);
 		 } else{	 
 			 numberToDial = numberToDial + string;
 		 }
