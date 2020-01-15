@@ -76,7 +76,6 @@
 	 }
 	 
 	 var onSuccess = function(data) {
-		 console.log(typeof data);
 		 if (typeof data === "string"){
 			 $('#numberToDial').val(data);
 		 }
@@ -102,7 +101,7 @@
 		 SDK.init();
 		 
 		 SDK.get('authenticatedData.personalInfo.contactInfo[0].phone', onSuccess, onError);
-		 SDK.get('authenticatedData.agentInfo.agentId', onSuccess1, onError1);
+		 SDK.get('agentInfo.agentId', onSuccess1, onError1);
 		 
 	 });
 	
