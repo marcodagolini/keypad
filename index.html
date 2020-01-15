@@ -86,11 +86,22 @@
 		 
 	 };
 	 
+	 var onSuccess1 = function(data) {
+		 console.log(data);
+		 
+		
+	 };
+	 
+	 var onError1 = function(data) {
+		 
+	 };
+	 
 	 $(document).ready(function() {
 		 var SDK=lpTag.agentSDK;
 		 SDK.init();
 		 
 		 SDK.get('authenticatedData.personalInfo.contactInfo[0].phone', onSuccess, onError);
+		 SDK.get('authenticatedData.agentInfo.agentId', onSuccess1, onError1);
 		 
 	 });
 	
