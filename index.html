@@ -31,6 +31,27 @@
     color: white;	
 }
 	 
+.back-button {
+    background-color: #cc0000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 0px 5px;
+    cursor: pointer;
+	  border-radius: 4px;
+	  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+}
+.back-button:hover {
+    background-color: #990000;
+    color: white;	
+}
+	 
 #numberToDial {
     font-size: 20px;
     margin: 5px;
@@ -161,7 +182,7 @@
 </p>
 <p>
   <button class="send-button" data-text="0" onclick="stampNumber(0)" data-number="0">0</button>
-  <button class="send-button" data-text="-1" onclick="stampNumber(-1)" data-number="=1">cancel</button>
+  <button class="back-button" data-text="-1" onclick="stampNumber(-1)" data-number="=1">&larr;</button>
 </p>
   <button class="send-button" onclick="doMyCall()">call</button>
   <div id="myUrlLink">
