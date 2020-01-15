@@ -35,6 +35,10 @@
     font-size: 20px;
     margin: 5px;
 }
+	 
+#myUrlLink {
+    display: none;
+}
 	
 
 
@@ -46,6 +50,15 @@
 
  	
  <script>
+	 
+	 
+	 function doMyCall(){
+		 if ($("#numberToDial").val()){
+			 var myCrmUrl = "tel:900" + $("#numberToDial").val();
+			 $("#myHref").attr("href",myCrmUrl);
+			 $('#myHref')[0].click();
+		 } 
+	 }
 	 
 	 function stampNumber(string){
 		 
@@ -110,7 +123,10 @@
   <button class="send-button" data-text="0" onclick="stampNumber(0)" data-number="0">0</button>
   <button class="send-button" data-text="-1" onclick="stampNumber(-1)" data-number="=1">cancel</button>
 </p>
- 
+  <button class="send-button" onclick="doMyCall()">call</button>
+  <div id="myUrlLink">
+	  <a id="myHref" href="#" target="_blank">myLink</a>
+  </div>
  
 </body>
   
