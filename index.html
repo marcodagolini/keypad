@@ -225,12 +225,10 @@ var btnClose = document.getElementById("closeModal");
 
 // Open the modal
 btnOpen.onclick = function() {
-    modal.className = "Modal is-visuallyHidden";
     setTimeout(function() {
-      container.className = "MainContainer is-blurred";
+      container.className = "is-blurred";
       modal.className = "Modal";
     }, 100);
-    container.parentElement.className = "ModalOpen";
 }
 
 // Close the modal
