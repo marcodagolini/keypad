@@ -48,6 +48,11 @@
   -webkit-filter: blur(2px);
 }
 	 
+.is-not-blurred {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+	 
 .send-button {
     background-color: #f68a1f;
     border: none;
@@ -233,9 +238,7 @@ btnOpen.onclick = function() {
 // Close the modal
 btnClose.onclick = function() {
     modal.className = "Modal is-hidden is-visuallyHidden";
-    body.className = "";
-    container.className = "MainContainer";
-    container.parentElement.className = "";
+    window.body.className = "is-not-blurred";
 }
 
 
