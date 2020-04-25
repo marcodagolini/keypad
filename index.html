@@ -216,30 +216,22 @@
 		 
 		 
 		 var modal = document.getElementById('myModal');
-
-// Get the main container and the body
-var body = document.getElementsByTagName('body');
-var container = document.getElementById('body');
-
-// Get the open button
-var btnOpen = document.getElementById("callButton");
-
-// Get the close button
-var btnClose = document.getElementById("closeModal");
-
-// Open the modal
-btnOpen.onclick = function() {
-    setTimeout(function() {
-      window.container.className = "is-blurred";
-      modal.className = "Modal";
-    }, 100);
-}
-
-// Close the modal
-btnClose.onclick = function() {
-    modal.className = "Modal is-hidden is-visuallyHidden";
-    window.body.className = "is-not-blurred";
-}
+		 var container = document.getElementById('body');
+		 
+		 var btnOpen = document.getElementById("callButton");
+		 var btnClose = document.getElementById("closeModal");
+		 
+		 btnOpen.onclick = function() {
+			 setTimeout(function() {
+				 window.container.className = "is-blurred";
+				 modal.className = "Modal";
+			 }, 100);
+		 }
+		 
+		 btnClose.onclick = function() {
+			 modal.className = "Modal is-hidden is-visuallyHidden";
+			 window.container.className = "is-not-blurred";
+		 }
 
 
 		 
