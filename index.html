@@ -101,9 +101,7 @@
 	 
 	 function doMyCall(){
 		 if ($("#numberToDial").val()){
-			 var myCrmUrl = "tel:900" + $("#numberToDial").val();
-			 $("#myHref").attr("href",myCrmUrl);
-			 $('#myHref')[0].click();
+			 var myPhoneNumber = "+" + $("#numberToDial").val();
 			 
 			 var xhr = new XMLHttpRequest();
 			 xhr.addEventListener("readystatechange", function () {
@@ -118,18 +116,14 @@
 					
           			}	
         		});
-        		var URLforPOST = "https://marcowabot.herokuapp.com/concurrency";
+        		var URLforPOST = "https://marcowabot.herokuapp.com/outboundCall";
 			xhr.open("POST", URLforPOST);
 			xhr.setRequestHeader("Content-Type", "application/json");
 			
-			var myBodyToSend = JSON.stringify({"agentId": myAgentID});
+			var myBodyToSend = JSON.stringify({"agentId": myAgentID, "phone": myPhoneNumber});
 			console.log(myBodyToSend);
         		xhr.send(myBodyToSend);
-			 
-			 
-			 
-			 
-			 
+			  
 			 
 		 } 
 	 }
