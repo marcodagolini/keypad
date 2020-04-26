@@ -214,11 +214,11 @@ svg:hover circle {
 		 if(string === -1){
 			 numberToDial = numberToDial.substring(0, numberToDial.length - 1);
 			 if(numberToDial === ""){
-				 $("#backButton").prop( "disabled", true );
+				 $("#backButton").css("display", "none");
 			 }
 		 } else{	 
 			 numberToDial = numberToDial + string;
-			 $("#backButton").prop( "disabled", false );
+			 $("#backButton").css("display", "block");
 		 }
 		 
 		 $('#numberToDial').val(numberToDial);
