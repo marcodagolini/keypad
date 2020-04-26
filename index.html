@@ -151,12 +151,21 @@ svg:hover circle {
 	 
 	 var myAgentID;
 	 
+	 function endMyCall(){
+		 $(".myRoundButton").css("pointer-events","all");
+		 $("#callButton").css("display", "block");
+		 $("#closeCallButton").css("display", "none");
+		 $("body").css("background-color","white");
+		 
+	 }
+	 
 	 
 	 function doMyCall(){
 		 
 		 	 $(".myRoundButton").css("pointer-events","none");
 			 $("#callButton").css("display", "none");
 			 $("#closeCallButton").css("display", "block");
+		 $("body").css("background-color","#3c3d56");
 		 
 		 
 		 
@@ -247,25 +256,7 @@ svg:hover circle {
 		 
 		 SDK.get('authenticatedData.personalInfo.contactInfo[0].phone', onSuccess, onError);
 		 SDK.get('agentInfo.agentId', onSuccess1, onError1);
-		 
-		 
-		 var btnOpen = document.getElementsByClassName("startcall");
-		 var btnClose = document.getElementsByClassName("endcall");
-
-		 
-		 btnOpen.onclick = function() {
-			 $(".myRoundButton").css("pointer-events","none");
-			 
-		 }
-		 
-		 btnClose.onclick = function() {
-
-		 }
-
-
-		 
-		 
-		 
+		  
 		 
 	 });
 	
