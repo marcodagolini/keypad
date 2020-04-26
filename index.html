@@ -152,11 +152,16 @@ svg:hover circle {
 	 
 	 
 	 function doMyCall(){
-		 if ($("#numberToDial").val()){
-			 
-			 $(".myRoundButton").css("pointer-events","none");
+		 
+		 	 $(".myRoundButton").css("pointer-events","none");
 			 $("#callButton").css("display", "none");
 			 $("#closeCallButton").css("display", "block");
+		 
+		 
+		 
+		 if ($("#numberToDial").val()){
+			 
+			 
 			 
 			 var myPhoneNumber = "+" + $("#numberToDial").val();
 			 
