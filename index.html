@@ -180,7 +180,8 @@ svg:hover circle {
 						
 					} else{
             					console.log(JSON.stringify(xhr.response));
-						localStorage.setItem("myRunningCall", xhr.response);
+						localStorage.setItem("myRunningCallID", xhr.response);
+						localStorage.setItem("myRunningCallNumber", $("#numberToDial").val());
 					}
 					
           			}	
@@ -254,8 +255,9 @@ svg:hover circle {
 		 SDK.get('authenticatedData.personalInfo.contactInfo[0].phone', onSuccess, onError);
 		 SDK.get('agentInfo.agentId', onSuccess1, onError1);
 		 
-		 var myRunningCall = localStorage.getItem("myRunningCall");
+		 var myRunningCall = localStorage.getItem("myRunningCallID");
 		 if(myRunningCall){
+			 $("#numberToDial").val(localStorage.getItem("myRunningCallNumber"))
 			 $(".myRoundButton").css("pointer-events","none");
 			 $("#callButton").css("display", "none");
 			 $("#closeCallButton").css("display", "block");
