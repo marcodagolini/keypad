@@ -269,6 +269,7 @@ svg:hover circle {
 		 myTelephoneNumber = data;
 		 if (typeof data === "string"){
 			 $('#numberToDial').val(data);
+			 $("#backButton").css("display", "block");
 		 }
 		
 	 };
@@ -331,7 +332,7 @@ svg:hover circle {
 <div id="container">
 	
 <p align="center">
-  <input type="text" id="numberToDial" value="" size="20" onkeyup="checkIfEmpty()" onclick="checkIfEmpty()">
+  <input type="text" id="numberToDial" value="" size="20" onkeyup="checkIfEmpty()" >
 </p>
 <p align="center" class="myParagraph">
   <svg class="myRoundButton" height="70" width="70" onclick="stampNumber(1)">
