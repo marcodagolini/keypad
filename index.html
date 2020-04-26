@@ -21,6 +21,7 @@ svg:hover circle {
 }
 	 
 .myParagraph {
+  user-select: none;
   margin-block-start: 0px;
   margin-block-end: 0px;
 }
@@ -318,43 +319,43 @@ svg:hover circle {
   </svg> 
 </p>
 <p align="center" class="myParagraph">
-  <svg height="70" width="70" onclick="stampNumber(4)">
+  <svg class="myRoundButton" height="70" width="70" onclick="stampNumber(4)">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px; user-select: none;" dy=".3em">4</text>
   </svg> 
-  <svg height="70" width="70" onclick="stampNumber(5)">
+  <svg class="myRoundButton" height="70" width="70" onclick="stampNumber(5)">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px; user-select: none;" dy=".3em">5</text>
   </svg> 
-  <svg height="70" width="70" onclick="stampNumber(6)">
+  <svg class="myRoundButton" height="70" width="70" onclick="stampNumber(6)">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px; user-select: none;" dy=".3em">6</text>
   </svg> 
 </p>
 <p align="center" class="myParagraph">
-  <svg height="70" width="70" onclick="stampNumber(7)">
+  <svg class="myRoundButton" height="70" width="70" onclick="stampNumber(7)">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px; user-select: none;" dy=".3em">7</text>
   </svg> 
-  <svg height="70" width="70" onclick="stampNumber(8)">
+  <svg class="myRoundButton" height="70" width="70" onclick="stampNumber(8)">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px; user-select: none;" dy=".3em">8</text>
   </svg> 
-  <svg height="70" width="70" onclick="stampNumber(9)">
+  <svg class="myRoundButton" height="70" width="70" onclick="stampNumber(9)">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px; user-select: none;" dy=".3em">9</text>
   </svg> 
 </p>
 <p align="center" class="myParagraph">
-  <svg height="70" width="70" onclick="stampNumber('*')">
+  <svg class="myRoundButton" height="70" width="70" onclick="stampNumber('*')">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px; user-select: none;" dy=".4em">*</text>
   </svg>
-  <svg height="70" width="70" onclick="stampNumber(0)">
+  <svg class="myRoundButton" height="70" width="70" onclick="stampNumber(0)">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px; user-select: none;" dy=".3em">0</text>
   </svg>
-  <svg height="70" width="70" onclick="stampNumber('#')">
+  <svg class="myRoundButton" height="70" width="70" onclick="stampNumber('#')">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px; user-select: none;" dy=".3em">#</text>
   </svg> 
@@ -362,7 +363,7 @@ svg:hover circle {
 <div class="center">
   <div style="height: 70px; width: 70px; float:left;"></div>
   <input type="button" id="callButton" class="startcall" onclick="doMyCall()">
-  <svg id="backButton" height="70" width="70" onclick="stampNumber(-1)" style="display:none; user-select: none;">
+  <svg id="backButton" class="myRoundButton" height="70" width="70" onclick="stampNumber(-1)" style="display:none; user-select: none;">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px;" dy=".3em">&larr;</text>
   </svg> 
