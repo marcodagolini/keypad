@@ -62,36 +62,7 @@ svg:hover circle {
     outline:none;
 }
 	 
-.Modal {
-  z-index: 9999;
-  width: 50px;
-  height: 50px;
-}
 
-.Modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border-radius: 4px;
-  max-width: 300px;
-  height: 450px;
-}
-
-.ModalOpen { overflow: hidden; }
-
-.is-hidden { display: none; }
-
-.is-visuallyHidden { opacity: 0; }
-	 
-.is-blurred {
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
-}
-	 
-.is-not-blurred {
-  filter: blur(0px);
-  -webkit-filter: blur(0px);
-}
 	 
 .send-button {
     background-color: #f68a1f;
@@ -183,6 +154,11 @@ svg:hover circle {
 	 
 	 function doMyCall(){
 		 if ($("#numberToDial").val()){
+			 
+			 $(".myRoundButton").css("pointer-events","none");
+			 $("#callButton").css("display", "none");
+			 $("#closeCallButton").css("display", "block");
+			 
 			 var myPhoneNumber = "+" + $("#numberToDial").val();
 			 
 			 var xhr = new XMLHttpRequest();
@@ -268,22 +244,17 @@ svg:hover circle {
 		 SDK.get('agentInfo.agentId', onSuccess1, onError1);
 		 
 		 
-		 var modal = document.getElementById('myModal');
-		 var container = document.getElementById('body');
-		 
-		 var btnOpen = document.getElementById("callButton");
-		 var btnClose = document.getElementById("closeModal");
+		 var btnOpen = document.getElementsByClassName("startcall");
+		 var btnClose = document.getElementsByClassName("endcall");
+
 		 
 		 btnOpen.onclick = function() {
-			 setTimeout(function() {
-				 window.container.className = "is-blurred";
-				 modal.className = "Modal";
-			 }, 100);
+			 $(".myRoundButton").css("pointer-events","none");
+			 
 		 }
 		 
 		 btnClose.onclick = function() {
-			 modal.className = "Modal is-hidden is-visuallyHidden";
-			 window.container.className = "is-not-blurred";
+
 		 }
 
 
@@ -364,6 +335,7 @@ svg:hover circle {
 <div class="center">
   <div style="height: 70px; width: 70px; float:left;"></div>
   <input type="button" id="callButton" class="startcall" onclick="doMyCall()">
+  <input type="button" id="closeCallButton" class="endcall" onclick="endMyCall()" style="display:none;">
   <svg id="backButton" class="myRoundButton" height="70" width="70" onclick="stampNumber(-1)" style="display:none; user-select: none;">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px;" dy=".3em">&larr;</text>
@@ -372,15 +344,7 @@ svg:hover circle {
 </div>
 </div>
 	
-  
 
-
-<div id="myModal" class="Modal is-hidden is-visuallyHidden">
-  <!-- Modal content -->
-  <div class="Modal-content">
-	  <input type="button" id="closeModal" class="endcall">
-  </div>
-</div>
  
 </body>
   
