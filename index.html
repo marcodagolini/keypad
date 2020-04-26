@@ -17,7 +17,7 @@ svg:hover circle {
 	 
 .center {
   margin: auto;
-  width: 60%;
+  width: 210px;
 }
 	 
 .myParagraph {
@@ -36,10 +36,11 @@ svg:hover circle {
 }
 	 
 .startcall {
-    background:url(https://res.cloudinary.com/djtjkiytu/image/upload/v1587855419/end_call.png) no-repeat;
+    background:url(https://res.cloudinary.com/djtjkiytu/image/upload/v1587862777/startcall.jpg) no-repeat;
     cursor:pointer;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
     border: none;
     background-size: cover;
     float:left;
@@ -333,7 +334,7 @@ svg:hover circle {
 </p>
 <div class="center">
   <div style="height: 70px; width: 70px; float:left;"></div>
-  <input type="button" id="closeModal" class="startcall">
+  <input type="button" id="callButton" class="startcall" onclick="doMyCall()">
   <svg height="70" width="70" onclick="stampNumber(-1)">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px;" dy=".3em">-1</text>
@@ -341,7 +342,7 @@ svg:hover circle {
 </div>
 <p align="center" class="myParagraph">
   <button class="back-button" data-text="-1" onclick="stampNumber(-1)" data-number="=1">&larr;</button>
-  <button id="callButton" class="call-button" onclick="doMyCall()">call</button>
+  <button id="callButton2" class="call-button" onclick="doMyCall()">call</button>
   <div id="myUrlLink">
 	  <a id="myHref" href="#" >myLink</a>
   </div>
