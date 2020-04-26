@@ -300,9 +300,26 @@ svg:hover circle {
   </svg> 
 </p>
 <p align="center">
+  <svg height="70" width="70" onclick="stampNumber(*)">
+  <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
+  <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px;" dy=".3em">*</text>
+  </svg>
   <svg height="70" width="70" onclick="stampNumber(0)">
   <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
   <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px;" dy=".3em">0</text>
+  </svg>
+  <svg height="70" width="70" onclick="stampNumber(#)">
+  <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
+  <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px;" dy=".3em">#</text>
+  </svg> 
+</p>
+<p align="center">
+  <div height="70" width="70"">
+  </div>
+  <input type="button" id="closeModal" class="endcall">
+  <svg height="70" width="70" onclick="stampNumber(-1)">
+  <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
+  <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px;" dy=".3em">-1</text>
   </svg> 
 </p>
 <p align="center">
