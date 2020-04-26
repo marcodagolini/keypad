@@ -150,6 +150,7 @@ svg:hover circle {
 	 function endMyCall(){
 		 
 		 var myRunningCallID = localStorage.getItem("myRunningCallID");
+		 $("#closeCallButton").prop( "disabled", true );
 		 
 		 var xhr = new XMLHttpRequest();
 		 xhr.addEventListener("readystatechange", function () {
@@ -163,9 +164,10 @@ svg:hover circle {
 					 $("body").css("background-color","white");
 					 localStorage.setItem("myRunningCallID", "");
 					 localStorage.setItem("myRunningCallNumber", "");
+					 $("#closeCallButton").prop( "disabled", false );
 				 
 				 } else{
-
+					 $("#closeCallButton").prop( "disabled", false );
 				 }
 			 }	
 		 });
@@ -185,12 +187,9 @@ svg:hover circle {
 		 
 		 if ($("#numberToDial").val()){
 			 
-			 $(".myRoundButton").css("pointer-events","none");
-			 $("#callButton").css("display", "none");
-			 $("#closeCallButton").css("display", "block");
-			 $("body").css("background-color","#3c3d56");
 			 
 			 
+			 $("#callButton").prop( "disabled", true );
 			 var myPhoneNumber = "+" + $("#numberToDial").val();
 			 
 			 var xhr = new XMLHttpRequest();
@@ -199,6 +198,7 @@ svg:hover circle {
 					// var jsonResult = JSON.parse(this.responseText);
 					if (xhr.response === "error"){
 						
+						$("#callButton").prop( "disabled", false );
 						$(".myRoundButton").css("pointer-events","all");
 						$("#callButton").css("display", "block");
 						$("#closeCallButton").css("display", "none");
@@ -206,6 +206,12 @@ svg:hover circle {
 
 						
 					} else{
+						
+						$("#callButton").prop( "disabled", false );
+						$(".myRoundButton").css("pointer-events","none");
+						$("#callButton").css("display", "none");
+						$("#closeCallButton").css("display", "block");
+						$("body").css("background-color","#3c3d56");
             					console.log(JSON.stringify(xhr.response));
 						localStorage.setItem("myRunningCallID", xhr.response);
 						localStorage.setItem("myRunningCallNumber", $("#numberToDial").val());
