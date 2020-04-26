@@ -167,6 +167,12 @@ svg:hover circle {
 					 $("#closeCallButton").prop( "disabled", false );
 				 
 				 } else{
+					 $(".myRoundButton").css("pointer-events","all");
+					 $("#callButton").css("display", "block");
+					 $("#closeCallButton").css("display", "none");
+					 $("body").css("background-color","white");
+					 localStorage.setItem("myRunningCallID", "");
+					 localStorage.setItem("myRunningCallNumber", "");
 					 $("#closeCallButton").prop( "disabled", false );
 				 }
 			 }	
