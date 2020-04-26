@@ -352,14 +352,15 @@ svg:hover circle {
 <div class="center">
   <div style="height: 70px; width: 70px; float:left;"></div>
   <input type="button" id="callButton" class="startcall" onclick="doMyCall()">
+  <svg id="backButton" height="70" width="70" onclick="stampNumber(-1)" style="display:none;">
+  <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
+  <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px;" dy=".3em">&larr;</text>
+  </svg> 
   
 </div>
 </div>
 	
-	<svg id="backButton" height="70" width="70" onclick="stampNumber(-1)" style="display:none;">
-  <circle cx="35" cy="35" r="30" fill="#dbdbdb" />
-  <text x="50%" y="50%" text-anchor="middle" style="font-size: 44px;" dy=".3em">&larr;</text>
-  </svg> 
+  
 
 
 <div id="myModal" class="Modal is-hidden is-visuallyHidden">
