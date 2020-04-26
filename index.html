@@ -208,6 +208,13 @@ svg:hover circle {
 		 } 
 	 }
 	 
+	 function checkIfEmpty(){
+		 var numberToDial = $("#numberToDial").val();
+		 if(numberToDial === ""){
+			 $("#backButton").css("display", "none");
+		 }
+	 }
+	 
 	 function stampNumber(string){
 		 
 		 var numberToDial = $("#numberToDial").val();
@@ -292,7 +299,7 @@ svg:hover circle {
 <div id="container">
 	
 <p align="center">
-  <input type="text" id="numberToDial" value="" size="20">
+  <input type="text" id="numberToDial" value="" size="20" onkeyup="checkIfEmpty()">
 </p>
 <p align="center" class="myParagraph">
   <svg height="70" width="70" onclick="stampNumber(1)">
